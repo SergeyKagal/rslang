@@ -1,0 +1,473 @@
+@use 'const';
+.wrapper {
+  background-color: #000000;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-family: Big-book;
+  font-size: 42px;
+  text-align: center;
+}
+
+.header {
+  height: 80px;
+  background-color: const.$color-white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px 0 40px;
+}
+.main-title {
+  font-family: Big-Book;
+  font-size: 48px;
+  color: const.$color-orange;
+  -webkit-text-stroke: 3px const.$color-yellow;
+  &:first-letter {
+    font-size: 57px;
+  }
+  span {
+    display: inline-block;
+    &:first-letter {
+      font-size: 57px;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  div {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: 0.3s transform, box-shadow;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px 5px const.$color-yellow;
+      transition: 0.3s transform, box-shadow;
+    }
+  }
+}
+.to-main {
+  background-image: url('../assets/images/svg/home-logo.svg');
+}
+.to-statistic {
+  background-image: url('../assets/images/svg/stat-logo.svg');
+}
+.to-logout {
+  background-image: url('../assets/images/svg/sign-logo.svg');
+}
+.menu-on {
+  background-image: url('../assets/images/svg/burger.svg');
+}
+.main {
+  background-color: const.$color-violet;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: const.$color-white;
+  height: 70px;
+}
+
+.about {
+  background-color: const.$color-blue;
+
+  h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: const.$color-orange;
+    -webkit-text-stroke: 2px const.$color-white;
+  }
+}
+
+.e-book {
+  background-color: const.$color-darkblue;
+
+  p {
+    color: const.$color-white;
+  }
+  .button {
+    display: block;
+    width: 200px;
+    height: 65px;
+    background-color: const.$color-orange;
+    font-size: 42px;
+    font-family: 'Segoe UI';
+    color: const.$color-white;
+    border: none;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 55px;
+    border-radius: 7px;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 0 15px 5px const.$color-white;
+      transition: box-shadow 0.3s;
+    }
+    &:active {
+      transform: scale(0.96);
+    }
+  }
+}
+
+.audio-call,
+.team {
+  background-color: const.$color-darkblue;
+}
+.sprint {
+  background-color: const.$color-blue;
+}
+.sign-in {
+  background-color: const.$color-yellow;
+  color: const.$color-orange;
+  font-weight: bold;
+  gap: 10px;
+
+  input {
+    font-size: 32px;
+
+    font-family: 'Segoe UI';
+    text-align: center;
+    width: 258px;
+    border-radius: 29px;
+    border: solid 3px const.$color-orange;
+    font-style: italic;
+  }
+
+  .sign-error,
+  .signup-error {
+    color: const.$color-red;
+    font-size: 14px;
+  }
+
+  button {
+    @extend input;
+    background-color: const.$color-orange;
+    color: const.$color-white;
+    font-style: normal;
+
+    margin-bottom: 0;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover > {
+      box-shadow: 0 0 15px 5px const.$color-white;
+      transition: box-shadow 0.3s;
+    }
+    &:active {
+      transform: scale(0.96);
+    }
+  }
+  .btn-span {
+    color: #404040;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.note {
+  color: const.$color-white;
+}
+.game-ico {
+  width: 160px;
+  height: 160px;
+}
+
+.audio-call,
+.sprint {
+  color: const.$color-red;
+  cursor: pointer;
+  &:hover {
+    box-shadow: inset 0 0 10px 5px const.$color-white;
+
+    z-index: 2;
+  }
+  &:active {
+    transform: scale(0.99);
+  }
+}
+
+.team-wrapper {
+  color: const.$color-yellow;
+  background-color: const.$color-darkblue;
+
+  h3 {
+    font-weight: normal;
+    font-size: 32px;
+  }
+  ul {
+    gap: 20px;
+    align-items: center;
+    color: const.$color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    img {
+      width: 80px;
+      height: 80px;
+    }
+
+    h4 {
+      font-weight: normal;
+      font-size: 20px;
+      text-align: center;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  a {
+    transition: transform 0.3s;
+    .rs-logo {
+      height: 55px;
+      &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s;
+      }
+    }
+  }
+}
+
+.btn-span {
+  span {
+    font-size: 20px !important;
+    text-decoration: underline;
+  }
+}
+
+.gh-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+
+  a {
+    font-family: 'Segoe UI';
+    text-decoration: none;
+    font-size: 24px;
+    color: const.$color-blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    &:hover {
+      color: const.$color-darkblue;
+    }
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.main-top-wrapper,
+.main-bottom-wrapper {
+  display: flex;
+  font-family: 'Segoe UI';
+  min-height: calc(50vh - 110px);
+
+  p,
+  span {
+    font-size: 32px;
+    text-align: justify;
+  }
+}
+.about,
+.e-book {
+  width: 40%;
+}
+.audio-call,
+.sprint,
+.sign-in,
+.team-wrapper {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.pad {
+  padding: 37px;
+}
+.team-wrapper {
+  gap: 15px;
+}
+//---------------------Adaptive to screen 1450
+//
+@media (max-width: 1540px) {
+  .base-timer {
+    width: 100px;
+    height: 100px;
+  }
+  .sprint-word {
+    font-size: 32px;
+  }
+
+  .header {
+    height: 50px;
+    .nav {
+      div {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+  .main-title {
+    font-size: 28px;
+    -webkit-text-stroke: 2px const.$color-yellow;
+    white-space: nowrap;
+    &:first-letter {
+      font-size: 34px;
+    }
+    span {
+      &:first-letter {
+        font-size: 34px;
+      }
+    }
+  }
+
+  .about,
+  .e-book,
+  .sprint,
+  .audio-call {
+    h2 {
+      font-size: 24px;
+    }
+    p,
+    span {
+      font-size: 18px;
+    }
+  }
+
+  .game-ico {
+    width: 100px;
+    height: 100px;
+  }
+
+  .footer {
+    height: 40px;
+    a {
+      font-size: 16px;
+      img {
+        height: 30px;
+      }
+    }
+  }
+  .sign-in {
+    gap: 5px;
+    span,
+    input,
+    button {
+      font-size: 18px;
+    }
+    button {
+      margin-top: 20px;
+    }
+    .btn-span {
+      font-size: 18px;
+    }
+  }
+  .team-wrapper {
+    li {
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    h3,
+    h4 {
+      font-size: 22px;
+      line-height: 22px;
+      font-weight: 700;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  .main-top-wrapper,
+  .main-bottom-wrapper {
+    min-height: calc(50vh - 45px);
+  }
+  .pad {
+    padding: 25px;
+  }
+  .team-wrapper ul {
+    gap: 10px;
+  }
+  .sprint-action-wrapper button {
+    height: 54px;
+    width: 158px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
+  .header {
+    padding: 0;
+  }
+
+  .nav .menu-on {
+    margin-right: 0;
+  }
+
+  .main-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    display: none;
+  }
+}
+
+@media (max-width: 525px) {
+  .gh-links {
+    gap: 0;
+    a img {
+      width: 30px;
+    }
+  }
+
+  .footer {
+    padding: 0;
+
+    a {
+      font-size: 12px;
+    }
+  }
+}

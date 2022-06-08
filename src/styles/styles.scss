@@ -1,0 +1,36 @@
+@use 'const';
+@use 'main';
+@use 'e-book';
+@use 'menu';
+@use 'error';
+@use 'audiocall';
+@use 'games';
+@use 'sprint';
+@use 'auth';
+@use 'sprint-res';
+
+@font-face {
+  font-family: Big-Book;
+  src: url('../assets/fonts/big-book-heavy.otf');
+}
+
+*,
+h1 {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html,
+body {
+  background-color: #000000;
+  height: 100%;
+  box-sizing: border-box;
+}

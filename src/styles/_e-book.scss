@@ -1,0 +1,415 @@
+@use 'const';
+
+button {
+  cursor: pointer;
+}
+
+.ebook {
+  font-family: 'Source Sans Variable';
+  background-color: const.$color-darkblue;
+  min-height: calc(100vh - 150px);
+}
+
+.ebook__container {
+  margin: 0 8.8% 0 9.8%;
+  padding-top: 26px;
+}
+
+.ebook__header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 34px;
+  font-weight: 700;
+  padding-left: 140px;
+  color: const.$color-white;
+}
+
+.ebook__pag {
+  font-family: 'Segoe UI';
+  background-color: const.$color-violet;
+  padding: 0 27px;
+  border-radius: 30px 30px 0 0;
+  font-size: 32px;
+  height: fit-content;
+  margin: 15px 0 0 0;
+
+  .tui-page-btn {
+    border: none;
+    height: auto;
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    margin: 0px 6px 0px;
+  }
+
+  .tui-page-btn:hover {
+    background-color: transparent;
+  }
+
+  .tui-ico-ellip,
+  .tui-ico-first,
+  .tui-ico-last,
+  .tui-ico-next,
+  .tui-ico-prev {
+    width: 30px;
+    height: 30px;
+    background-position: 0% 0% !important;
+    background-size: contain;
+    filter: invert(100%);
+  }
+
+  .tui-ico-ellip {
+    background-image: url('../assets/images/svg/dots.svg');
+    margin-top: 22px;
+  }
+
+  .tui-ico-prev {
+    background-image: url('../assets/images/svg/arrow-left.svg');
+  }
+
+  .tui-ico-next {
+    background-image: url('../assets/images/svg/arrow-left.svg');
+    transform: rotate(180deg);
+  }
+
+  .tui-ico-first {
+    background-image: url('../assets/images/svg/double-arrow-left.svg');
+  }
+
+  .tui-ico-last {
+    background-image: url('../assets/images/svg/double-arrow-left.svg');
+    filter: invert(100%);
+    transform: rotate(180deg);
+  }
+
+  .tui-is-selected {
+    text-decoration: underline;
+    text-decoration-color: const.$color-blue;
+    background-color: transparent;
+  }
+
+  .tui-is-selected:hover {
+    background-color: transparent;
+  }
+
+  .tui-first-child.tui-is-selected,
+  .tui-last-child.tui-is-selected {
+    border: none;
+  }
+}
+
+.ebook__menu {
+  button {
+    border: 1px;
+    color: const.$color-white;
+    font-weight: 700;
+    position: relative;
+    padding: 8px 30px 20px 20px;
+    font-size: 25px;
+    border-radius: 37px 27px 0 0;
+  }
+
+  .ebook__audiocall {
+    background-color: const.$color-blue;
+    left: 33px;
+  }
+
+  .ebook__sprint {
+    background-color: const.$color-darkorange;
+  }
+
+  img {
+    width: 34px;
+    height: 34px;
+    position: relative;
+    top: 10px;
+  }
+
+  .ebook__sprint img {
+    top: 6px;
+  }
+}
+
+.ebook__main {
+  display: flex;
+}
+
+.tabs__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs__container {
+  height: 108px;
+  width: 43px;
+
+  :first-child {
+    background-color: const.$color-yellow;
+  }
+
+  :nth-child(2) {
+    bottom: 8px;
+    background-color: const.$color-blue;
+  }
+
+  :nth-child(3) {
+    bottom: 13px;
+    background-color: const.$color-greenacid;
+  }
+
+  :nth-child(4) {
+    bottom: 23px;
+    background-color: const.$color-darkorange;
+  }
+
+  :nth-child(5) {
+    bottom: 34px;
+    background-color: const.$color-violet;
+  }
+
+  :nth-child(6) {
+    bottom: 45px;
+    background-color: #ff971a;
+  }
+
+  :nth-child(7) {
+    bottom: 55px;
+    background-color: #e43f37;
+  }
+}
+
+.tab {
+  cursor: pointer;
+  font-family: 'Source Sans Variable';
+  color: white;
+  font-size: 19px;
+  font-weight: 700;
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
+  white-space: nowrap;
+  padding: 13px 5px 15px 10px;
+  border-radius: 0 15px 19px 0;
+  position: relative;
+}
+
+.content__container {
+  width: 100%;
+
+  > :first-child {
+    background-color: const.$color-yellow;
+  }
+
+  > :nth-child(2) {
+    background-color: const.$color-blue;
+  }
+
+  > :nth-child(3) {
+    background-color: const.$color-greenacid;
+  }
+
+  > :nth-child(4) {
+    background-color: const.$color-darkorange;
+  }
+
+  > :nth-child(5) {
+    background-color: const.$color-violet;
+  }
+
+  > :nth-child(6) {
+    background-color: #ff971a;
+  }
+
+  > :nth-child(7) {
+    background-color: #e43f37;
+  }
+}
+
+.content {
+  font-family: 'Segoe UI';
+  padding: 5%;
+  min-height: 586px;
+}
+
+.active {
+  z-index: 150;
+}
+
+.hide {
+  display: none;
+}
+
+.done-page {
+  font-weight: 700;
+  font-size: 22px;
+  color: green;
+}
+
+.card {
+  display: inline-flex;
+  margin: 0 0 40px 0;
+  position: relative;
+  background-color: transparent;
+  font-size: 22px;
+  min-width: 100%;
+
+  img {
+    width: 260px;
+    height: 180px;
+  }
+
+  button {
+    width: 52px;
+    height: 52px;
+    border: none;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    margin: 0 15px;
+  }
+
+  .card__score {
+    display: flex;
+    position: relative;
+    right: 34px;
+    top: 15px;
+    height: fit-content;
+    font-weight: 700;
+
+    p,
+    span {
+      height: fit-content;
+    }
+  }
+
+  .card__image {
+    min-width: 260px;
+    object-fit: cover;
+    padding-top: 17px;
+  }
+
+  .card__header {
+    display: flex;
+    // justify-content: space-between;
+    font-weight: 700;
+    flex-wrap: wrap;
+  }
+
+  .difficult {
+    justify-content: start;
+  }
+
+  .card__header_left,
+  .card__header_center {
+    display: flex;
+    padding-top: 3px;
+    white-space: nowrap;
+  }
+
+  .card__audio {
+    background-image: url('../assets/images/svg/audio.svg');
+  }
+
+  .card__list {
+    background-image: url('../assets/images/svg/list.svg');
+  }
+
+  .card__todone {
+    background-image: url('../assets/images/svg/learnt.svg');
+    background-size: cover;
+  }
+
+  .card__list-delete {
+    background-image: url('../assets/images/svg/delete.svg');
+    background-size: cover;
+  }
+
+  .card__text {
+    width: 100%;
+  }
+
+  .card__description {
+    font-size: 19px;
+  }
+
+  .card__meaning-translate {
+    padding-bottom: 15px;
+  }
+  .card__done {
+    // background-image: url('../assets/images/svg/done.svg');
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.hard {
+  box-shadow: 15px 10px 0 rgb(228 63 14);
+}
+
+.hidden {
+  opacity: 0;
+}
+.underline {
+  color: green !important;
+}
+
+@media (max-width: 1300px) {
+  .card__header {
+    flex-direction: column;
+  }
+
+  .ebook__container {
+    margin: 0 2% 0 3%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .ebook__header {
+    padding-left: 15px;
+  }
+
+  .ebook__pag .tui-page-btn {
+    margin: 0px 1px 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+
+    .card__header {
+      align-items: center;
+    }
+
+    .card__score {
+      position: static;
+      padding-top: 5px;
+    }
+  }
+  .ebook__header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ebook__pag {
+    margin-left: 38px;
+  }
+}
+
+@media (max-width: 520px) {
+  .card__header,
+  .ebook__menu button {
+    font-size: 14px;
+  }
+  .card .card__description {
+    font-size: 13px;
+  }
+  .card__score {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 425px) {
+  .ebook__pag {
+    padding: 0;
+  }
+}
